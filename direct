@@ -4,13 +4,24 @@ add ax,bx
 mov [5000],ax
 hlt
 
+mov ax,[2000]
+mov bx,[2002]
 sub ax,bx
+mov [5000],ax
+hlt
 
+
+mov ax,[5000]
+mov di,[5002]
 mul bx
+mov [5000],ax
+hlt
 
-
+mov ax,[5000]
+mov bx,[5002]
 div bx
-
+mov [5000],ax
+hlt
 
 e 2000
 072A:2000 00.11 00.22
@@ -19,3 +30,5 @@ e 2000
 
 -d 5000 5002
 072A:5000 
+
+-u
